@@ -18,6 +18,7 @@ import RealmSwift
 class User: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id = UUID().uuidString
     @Persisted var userName = ""
+    @Persisted var posts: List<UserPost>
 
     convenience init(userName: String, id: String) {
         self.init()

@@ -29,25 +29,27 @@ struct LoggedInView: View {
                 HomeView(user: user)
             }
         }
-        .onAppear(perform: setSubscription)
+        .onAppear(perform:
+                    {setSubscriptionUserCurrent(userID: userID, realm: realm)}
+        )
     }
     
-    private func setSubscription() {
-        let subscriptions = realm.subscriptions
-        subscriptions.write {
-            if let currentSubscription = subscriptions.first(named: "user_id") {
-                print("Replacing subscription for user_id")
-                currentSubscription.update(toType: User.self) { user in
-                    user._id == userID!
-                }
-            } else {
-                print("Appending subscription for user_id")
-                subscriptions.append(QuerySubscription<User>(name: "user_id") { user in
-                    user._id == userID!
-                })
-            }
-        }
-    }
+//    private func setSubscription() {
+//        let subscriptions = realm.subscriptions
+//        subscriptions.write {
+//            if let currentSubscription = subscriptions.first(named: "user_id") {
+//                print("Replacing subscription for user_id")
+//                currentSubscription.update(toType: User.self) { user in
+//                    user._id == userID!
+//                }
+//            } else {
+//                print("Appending subscription for user_id")
+//                subscriptions.append(QuerySubscription<User>(name: "user_id") { user in
+//                    user._id == userID!
+//                })
+//            }
+//        }
+//    }
 }
 
 struct LoggedInView_Previews: PreviewProvider {
