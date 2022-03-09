@@ -17,8 +17,8 @@ struct DiaryEntryDetailView: View {
     @State private var entryBody = ""
     var body: some View {
         VStack {
-            Text("Title: \(title)")
-            Text("Body: \(entryBody)")
+            Text("Title: \(diaryEntry.title)")
+            Text("Body: \(diaryEntry.body)")
             Spacer()
             TextField("Title", text: $title)
             TextField("Body", text: $entryBody)

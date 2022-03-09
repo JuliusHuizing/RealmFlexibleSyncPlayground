@@ -12,7 +12,7 @@ struct DailyDiaryView: View {
     @ObservedRealmObject var user: User
     @ObservedResults(DiaryEntry.self) var diaryEntries
     @State private var showingSheet = false
-    @State private var selectedDiaryEntry: DiaryEntry? = nil
+    @State private var selectedDiaryEntry: DiaryEntry = DiaryEntry()
     let date: Date
     var body: some View {
         VStack {
@@ -36,7 +36,7 @@ struct DailyDiaryView: View {
                 $diaryEntries.append(initDiaryEntry)
             }
         }.sheet(isPresented: $showingSheet, onDismiss: {}) {
-            DiaryEntryDetailView(user: user, diaryEntry: selectedDiaryEntry!)
+            DiaryEntryDetailView(user: user, diaryEntry: selectedDiaryEntry)
         }
     }
 }
