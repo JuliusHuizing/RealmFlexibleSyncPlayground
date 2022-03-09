@@ -28,28 +28,16 @@ struct LoggedInView: View {
             if let user = users.first {
                 HomeView(user: user)
             }
+            else {
+                 // TODO: Discuss why this can sometimes take very long (+ 15 minutes) after cleaning up atlas collection and realm users and client side device.
+                Text("waiting for user to be found")
+                
+            }
         }
         .onAppear(perform:
                     {setSubscriptionUserCurrent(userID: userID, realm: realm)}
         )
     }
-    
-//    private func setSubscription() {
-//        let subscriptions = realm.subscriptions
-//        subscriptions.write {
-//            if let currentSubscription = subscriptions.first(named: "user_id") {
-//                print("Replacing subscription for user_id")
-//                currentSubscription.update(toType: User.self) { user in
-//                    user._id == userID!
-//                }
-//            } else {
-//                print("Appending subscription for user_id")
-//                subscriptions.append(QuerySubscription<User>(name: "user_id") { user in
-//                    user._id == userID!
-//                })
-//            }
-//        }
-//    }
 }
 
 struct LoggedInView_Previews: PreviewProvider {

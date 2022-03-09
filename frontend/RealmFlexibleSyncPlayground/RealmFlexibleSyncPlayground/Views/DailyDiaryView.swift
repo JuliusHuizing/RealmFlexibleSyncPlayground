@@ -8,6 +8,7 @@
 import SwiftUI
 import RealmSwift
 
+
 struct DailyDiaryView: View {
     @ObservedRealmObject var user: User
     @ObservedResults(DiaryEntry.self) var diaryEntries
@@ -22,6 +23,7 @@ struct DailyDiaryView: View {
                         Text(entry.title)
                         Text(entry.body)
                         Button("Edit") {
+                            // TODO: discuss why this only seem to work as intented after presenting sheet mutliple times.
                             selectedDiaryEntry = entry
                             showingSheet = true
                         }
