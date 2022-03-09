@@ -11,6 +11,16 @@
 		C6337B1627D7ADAD00E04A54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B1527D7ADAD00E04A54 /* ContentView.swift */; };
 		C6337B1827D7ADAE00E04A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6337B1727D7ADAE00E04A54 /* Assets.xcassets */; };
 		C6337B1B27D7ADAE00E04A54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6337B1A27D7ADAE00E04A54 /* Preview Assets.xcassets */; };
+		C6337B2327D7B02A00E04A54 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C6337B2227D7B02A00E04A54 /* Realm */; };
+		C6337B2527D7B02A00E04A54 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C6337B2427D7B02A00E04A54 /* RealmSwift */; };
+		C6337B2727D7B06F00E04A54 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B2627D7B06F00E04A54 /* AppState.swift */; };
+		C6337B2927D7B0DF00E04A54 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B2827D7B0DF00E04A54 /* LoginView.swift */; };
+		C6337B2B27D7B1C500E04A54 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B2A27D7B1C500E04A54 /* LoggedInView.swift */; };
+		C6337B2E27D7B52500E04A54 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B2D27D7B52500E04A54 /* User.swift */; };
+		C6337B3027D8B6E600E04A54 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B2F27D8B6E600E04A54 /* HomeView.swift */; };
+		C6337B3227D8B7A900E04A54 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3127D8B7A900E04A54 /* NewsFeedView.swift */; };
+		C6337B3427D8B7B200E04A54 /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3327D8B7B200E04A54 /* NetworkView.swift */; };
+		C6337B3627D8B7C300E04A54 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3527D8B7C300E04A54 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,14 @@
 		C6337B1527D7ADAD00E04A54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C6337B1727D7ADAE00E04A54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6337B1A27D7ADAE00E04A54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6337B2627D7B06F00E04A54 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C6337B2827D7B0DF00E04A54 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C6337B2A27D7B1C500E04A54 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		C6337B2D27D7B52500E04A54 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6337B2F27D8B6E600E04A54 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C6337B3127D8B7A900E04A54 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
+		C6337B3327D8B7B200E04A54 /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
+		C6337B3527D8B7C300E04A54 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6337B2527D7B02A00E04A54 /* RealmSwift in Frameworks */,
+				C6337B2327D7B02A00E04A54 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +71,11 @@
 		C6337B1227D7ADAD00E04A54 /* RealmFlexibleSyncPlayground */ = {
 			isa = PBXGroup;
 			children = (
-				C6337B1327D7ADAD00E04A54 /* RealmFlexibleSyncPlaygroundApp.swift */,
+				C6337B2627D7B06F00E04A54 /* AppState.swift */,
 				C6337B1527D7ADAD00E04A54 /* ContentView.swift */,
+				C6337B2C27D7B51800E04A54 /* Models */,
+				C6337B1327D7ADAD00E04A54 /* RealmFlexibleSyncPlaygroundApp.swift */,
+				C6337B3727D8B86F00E04A54 /* Views */,
 				C6337B1727D7ADAE00E04A54 /* Assets.xcassets */,
 				C6337B1927D7ADAE00E04A54 /* Preview Content */,
 			);
@@ -65,6 +88,27 @@
 				C6337B1A27D7ADAE00E04A54 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6337B2C27D7B51800E04A54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6337B2D27D7B52500E04A54 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6337B3727D8B86F00E04A54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6337B2827D7B0DF00E04A54 /* LoginView.swift */,
+				C6337B2A27D7B1C500E04A54 /* LoggedInView.swift */,
+				C6337B2F27D8B6E600E04A54 /* HomeView.swift */,
+				C6337B3527D8B7C300E04A54 /* ProfileView.swift */,
+				C6337B3327D8B7B200E04A54 /* NetworkView.swift */,
+				C6337B3127D8B7A900E04A54 /* NewsFeedView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +127,10 @@
 			dependencies = (
 			);
 			name = RealmFlexibleSyncPlayground;
+			packageProductDependencies = (
+				C6337B2227D7B02A00E04A54 /* Realm */,
+				C6337B2427D7B02A00E04A54 /* RealmSwift */,
+			);
 			productName = RealmFlexibleSyncPlayground;
 			productReference = C6337B1027D7ADAD00E04A54 /* RealmFlexibleSyncPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +159,9 @@
 				Base,
 			);
 			mainGroup = C6337B0727D7ADAD00E04A54;
+			packageReferences = (
+				C6337B2127D7B02A00E04A54 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = C6337B1127D7ADAD00E04A54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6337B2B27D7B1C500E04A54 /* LoggedInView.swift in Sources */,
+				C6337B3227D8B7A900E04A54 /* NewsFeedView.swift in Sources */,
+				C6337B3627D8B7C300E04A54 /* ProfileView.swift in Sources */,
+				C6337B3027D8B6E600E04A54 /* HomeView.swift in Sources */,
+				C6337B3427D8B7B200E04A54 /* NetworkView.swift in Sources */,
+				C6337B2727D7B06F00E04A54 /* AppState.swift in Sources */,
+				C6337B2E27D7B52500E04A54 /* User.swift in Sources */,
 				C6337B1627D7ADAD00E04A54 /* ContentView.swift in Sources */,
+				C6337B2927D7B0DF00E04A54 /* LoginView.swift in Sources */,
 				C6337B1427D7ADAD00E04A54 /* RealmFlexibleSyncPlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +400,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6337B2127D7B02A00E04A54 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6337B2227D7B02A00E04A54 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6337B2127D7B02A00E04A54 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C6337B2427D7B02A00E04A54 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6337B2127D7B02A00E04A54 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6337B0827D7ADAD00E04A54 /* Project object */;
 }
