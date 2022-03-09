@@ -44,6 +44,11 @@ struct HomeView: View {
                     Image(systemName: "list.bullet")
                     Text("news feed")
                 }
+            DiaryView(user: user)
+                .tabItem() {
+                    Image(systemName: "list.bullet")
+                    Text("weekly diary")
+                }
             NetworkView(user: user)
                 .tabItem() {
                     Image(systemName: "list.bullet")

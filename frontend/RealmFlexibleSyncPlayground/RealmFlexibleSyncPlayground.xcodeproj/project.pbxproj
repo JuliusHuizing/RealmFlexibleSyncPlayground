@@ -23,6 +23,11 @@
 		C6337B3627D8B7C300E04A54 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3527D8B7C300E04A54 /* ProfileView.swift */; };
 		C6337B3A27D8BCDD00E04A54 /* SetSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3927D8BCDD00E04A54 /* SetSubscriptions.swift */; };
 		C6337B3C27D8E5A700E04A54 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3B27D8E5A700E04A54 /* UserPost.swift */; };
+		C6337B3E27D8ECCC00E04A54 /* GetDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3D27D8ECCC00E04A54 /* GetDates.swift */; };
+		C6337B4027D8F12100E04A54 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B3F27D8F12100E04A54 /* DiaryView.swift */; };
+		C6337B4227D8F42A00E04A54 /* DailyDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B4127D8F42A00E04A54 /* DailyDiaryView.swift */; };
+		C6337B4427D8F60000E04A54 /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B4327D8F60000E04A54 /* DiaryEntry.swift */; };
+		C6337B4627D8FA7B00E04A54 /* DiaryEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B4527D8FA7B00E04A54 /* DiaryEntryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		C6337B3527D8B7C300E04A54 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C6337B3927D8BCDD00E04A54 /* SetSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSubscriptions.swift; sourceTree = "<group>"; };
 		C6337B3B27D8E5A700E04A54 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
+		C6337B3D27D8ECCC00E04A54 /* GetDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDates.swift; sourceTree = "<group>"; };
+		C6337B3F27D8F12100E04A54 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		C6337B4127D8F42A00E04A54 /* DailyDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDiaryView.swift; sourceTree = "<group>"; };
+		C6337B4327D8F60000E04A54 /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
+		C6337B4527D8FA7B00E04A54 /* DiaryEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C6337B2D27D7B52500E04A54 /* User.swift */,
+				C6337B4327D8F60000E04A54 /* DiaryEntry.swift */,
 				C6337B3B27D8E5A700E04A54 /* UserPost.swift */,
 			);
 			path = Models;
@@ -106,9 +117,12 @@
 		C6337B3727D8B86F00E04A54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C6337B2F27D8B6E600E04A54 /* HomeView.swift */,
 				C6337B2827D7B0DF00E04A54 /* LoginView.swift */,
 				C6337B2A27D7B1C500E04A54 /* LoggedInView.swift */,
-				C6337B2F27D8B6E600E04A54 /* HomeView.swift */,
+				C6337B3F27D8F12100E04A54 /* DiaryView.swift */,
+				C6337B4127D8F42A00E04A54 /* DailyDiaryView.swift */,
+				C6337B4527D8FA7B00E04A54 /* DiaryEntryDetailView.swift */,
 				C6337B3527D8B7C300E04A54 /* ProfileView.swift */,
 				C6337B3327D8B7B200E04A54 /* NetworkView.swift */,
 				C6337B3127D8B7A900E04A54 /* NewsFeedView.swift */,
@@ -121,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				C6337B3927D8BCDD00E04A54 /* SetSubscriptions.swift */,
+				C6337B3D27D8ECCC00E04A54 /* GetDates.swift */,
 			);
 			path = Fns;
 			sourceTree = "<group>";
@@ -208,9 +223,14 @@
 				C6337B3627D8B7C300E04A54 /* ProfileView.swift in Sources */,
 				C6337B3027D8B6E600E04A54 /* HomeView.swift in Sources */,
 				C6337B3427D8B7B200E04A54 /* NetworkView.swift in Sources */,
+				C6337B4427D8F60000E04A54 /* DiaryEntry.swift in Sources */,
 				C6337B2727D7B06F00E04A54 /* AppState.swift in Sources */,
+				C6337B4227D8F42A00E04A54 /* DailyDiaryView.swift in Sources */,
 				C6337B2E27D7B52500E04A54 /* User.swift in Sources */,
+				C6337B3E27D8ECCC00E04A54 /* GetDates.swift in Sources */,
 				C6337B3A27D8BCDD00E04A54 /* SetSubscriptions.swift in Sources */,
+				C6337B4027D8F12100E04A54 /* DiaryView.swift in Sources */,
+				C6337B4627D8FA7B00E04A54 /* DiaryEntryDetailView.swift in Sources */,
 				C6337B1627D7ADAD00E04A54 /* ContentView.swift in Sources */,
 				C6337B2927D7B0DF00E04A54 /* LoginView.swift in Sources */,
 				C6337B1427D7ADAD00E04A54 /* RealmFlexibleSyncPlaygroundApp.swift in Sources */,

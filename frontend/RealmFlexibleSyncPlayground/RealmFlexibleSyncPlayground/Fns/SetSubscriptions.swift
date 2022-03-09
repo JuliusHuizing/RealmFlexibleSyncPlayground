@@ -80,3 +80,21 @@ func setSubscriptionUserPostUser(user: User, realm: Realm) {
             }
         }
 }
+
+
+func setSubscriptionDiaryEntryUser(user: User, realm: Realm) {
+        let subscriptions = realm.subscriptions
+        subscriptions.write {
+            if let currentSubscription = subscriptions.first(named: "specific user diary entries") {
+                print("Replacing subscription for specific user diary entries")
+                currentSubscription.update(toType: DiaryEntry.self) { entry in
+                    entry.ownerID == user._id
+                }
+            } else {
+                print("Appending subscription for specific user diary entries")
+                subscriptions.append(QuerySubscription<DiaryEntry>(name: "specific user diary entries") { entry in
+                    entry.ownerID == user._id
+                })
+            }
+        }
+}
