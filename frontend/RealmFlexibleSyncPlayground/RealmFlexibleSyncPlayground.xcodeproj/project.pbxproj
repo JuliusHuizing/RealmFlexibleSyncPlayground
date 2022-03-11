@@ -28,6 +28,7 @@
 		C6337B4227D8F42A00E04A54 /* DailyDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B4127D8F42A00E04A54 /* DailyDiaryView.swift */; };
 		C6337B4427D8F60000E04A54 /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B4327D8F60000E04A54 /* DiaryEntry.swift */; };
 		C6337B4627D8FA7B00E04A54 /* DiaryEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6337B4527D8FA7B00E04A54 /* DiaryEntryDetailView.swift */; };
+		C6635DF627DB8241006B4FB3 /* OperationsOnObservedResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6635DF527DB8241006B4FB3 /* OperationsOnObservedResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		C6337B4127D8F42A00E04A54 /* DailyDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDiaryView.swift; sourceTree = "<group>"; };
 		C6337B4327D8F60000E04A54 /* DiaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
 		C6337B4527D8FA7B00E04A54 /* DiaryEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryDetailView.swift; sourceTree = "<group>"; };
+		C6635DF527DB8241006B4FB3 /* OperationsOnObservedResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsOnObservedResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				C6337B3927D8BCDD00E04A54 /* SetSubscriptions.swift */,
 				C6337B3D27D8ECCC00E04A54 /* GetDates.swift */,
+				C6635DF527DB8241006B4FB3 /* OperationsOnObservedResults.swift */,
 			);
 			path = Fns;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				C6337B3C27D8E5A700E04A54 /* UserPost.swift in Sources */,
 				C6337B3627D8B7C300E04A54 /* ProfileView.swift in Sources */,
 				C6337B3027D8B6E600E04A54 /* HomeView.swift in Sources */,
+				C6635DF627DB8241006B4FB3 /* OperationsOnObservedResults.swift in Sources */,
 				C6337B3427D8B7B200E04A54 /* NetworkView.swift in Sources */,
 				C6337B4427D8F60000E04A54 /* DiaryEntry.swift in Sources */,
 				C6337B2727D7B06F00E04A54 /* AppState.swift in Sources */,

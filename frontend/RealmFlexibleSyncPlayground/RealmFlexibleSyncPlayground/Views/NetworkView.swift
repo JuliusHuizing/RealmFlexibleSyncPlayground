@@ -13,6 +13,7 @@ struct NetworkView: View {
     // TODO: discuss why this still seems to show users that have been deleted?
     @ObservedResults(User.self) var users
     @Environment(\.realm) var realm
+    @State var usersWithUserNameBiggerThanOneCount = 0
     var body: some View {
         VStack {
             Text("All registered users:")
@@ -24,8 +25,17 @@ struct NetworkView: View {
                 }
             
         }
-            .onAppear(perform: {setSubscriptionUserAll(realm: realm)}) // Note that  this sub will add new
+            .onAppear(perform: {setSubscriptionUserAll(realm: realm)
+                
+                // TODO: Discuss how one could do something like this.
+                let usersWithUsernamesBiggerThanOne = someFnOnObservedUserObjects(users: users)
+                usersWithUserNameBiggerThanOneCount = usersWithUsernamesBiggerThanOne.count
+                
+                
+                
+            }) // Note that  this sub will add new
     }
+    
 }
 
 struct NetworkView_Previews: PreviewProvider {
