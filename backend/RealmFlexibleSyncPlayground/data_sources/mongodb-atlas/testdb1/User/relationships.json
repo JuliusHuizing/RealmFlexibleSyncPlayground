@@ -1,0 +1,8 @@
+{
+    "posts": {
+        "ref": "#/relationship/mongodb-atlas/testdb1/UserPost",
+        "source_key": "posts",
+        "foreign_key": "_id",
+        "is_list": true
+    }
+}

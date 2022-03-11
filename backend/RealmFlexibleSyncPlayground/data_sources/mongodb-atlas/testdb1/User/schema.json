@@ -1,0 +1,40 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "string"
+        },
+        "friendRequestsIncoming": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "friendRequestsOutgoing": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "friends": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "posts": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "userName": {
+            "bsonType": "string"
+        }
+    },
+    "required": [
+        "_id",
+        "userName"
+    ],
+    "title": "User"
+}

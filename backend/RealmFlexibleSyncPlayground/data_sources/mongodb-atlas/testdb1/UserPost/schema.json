@@ -1,0 +1,24 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "string"
+        },
+        "body": {
+            "bsonType": "string"
+        },
+        "ownerID": {
+            "bsonType": "string"
+        },
+        "title": {
+            "bsonType": "string"
+        }
+    },
+    "required": [
+        "_id",
+        "ownerID",
+        "title",
+        "body"
+    ],
+    "title": "UserPost"
+}
