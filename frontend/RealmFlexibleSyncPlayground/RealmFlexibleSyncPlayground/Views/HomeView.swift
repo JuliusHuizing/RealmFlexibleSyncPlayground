@@ -32,7 +32,7 @@ struct HomeView: View {
                 Text("'@ObservedResults(User.self) var users' count: \(users.count)")
             }
 
-                    ).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                    ).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
 
                 
             Spacer()
@@ -41,28 +41,28 @@ struct HomeView: View {
         TabView {
             NewsFeedView(user: user)
                 .tabItem() {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "newspaper")
                     Text("news feed")
                 }
             DiaryView(user: user)
                 .tabItem() {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "note.text.badge.plus")
                     Text("weekly diary")
                 }
             NetworkView(user: user)
                 .tabItem() {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "network")
                     Text("network")
                 }
             ProfileView(user: user)
                 .tabItem() {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "person")
                     Text("profile")
                 }
 
         }
         }.onAppear(perform: {
-            // Note we do not need to do a sub to the users again, as a parent of this view, LoggedinView, has already done that sub for us and now we still have access to its results through the @ObservedResults(User.self) var users collection defined above.
+            // Note we do not need to do a sub to the users again, as a parent of this view, LoggedinView, has already done that sub for us and now we still have access to its results through the @ObservedResults(User.self) var users collection at the top of the view.
             
         })
             
