@@ -23,7 +23,7 @@ struct DailyDiaryView: View {
                         Text(entry.title)
                         Text(entry.body)
                         Button("Edit") {
-                            // TODO: discuss why this only seem to work as intented after presenting sheet mutliple times.
+                            //  TODO: After pressing this button on a just created diary entry (see button below), I would expect the DetailDiaryView to immediately show a diary entry with title 'test title' ad body 'test body'. Instead, it often first shows empty strings, and only shows the expected strings after multiple attempts or after adding more diary entries with the button below.
                             selectedDiaryEntry = entry
                             showingSheet = true
                         }

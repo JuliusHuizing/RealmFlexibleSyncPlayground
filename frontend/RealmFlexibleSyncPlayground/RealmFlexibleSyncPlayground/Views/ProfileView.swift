@@ -10,8 +10,15 @@ import RealmSwift
 
 struct ProfileView: View {
     @ObservedRealmObject var user: User
+    @State private var newUserName = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Username", text: $newUserName)
+            Button("confirm"){
+                // TODO: discuss, why do we need the wrappedValue here for this to work?
+                $user.userName.wrappedValue = newUserName
+            }
+        }
     }
 }
 

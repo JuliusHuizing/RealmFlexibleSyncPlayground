@@ -29,7 +29,7 @@ struct LoggedInView: View {
                 HomeView(user: user)
             }
             else {
-                 // TODO: Discuss why this can sometimes take very long (+ 15 minutes) after cleaning up atlas collection and realm users and client side device.
+                 // TODO: Discuss why this sometimes take very long (+ 15 minutes) after cleaning up atlas collection and realm users and client side device.
                 Text("waiting for user to be found")
                 
             }
