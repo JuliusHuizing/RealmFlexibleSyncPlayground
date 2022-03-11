@@ -10,12 +10,13 @@ import RealmSwift
 
 struct NetworkView: View {
     @ObservedRealmObject var user: User
+    // TODO: discuss why this still seems to show users that have been deleted?
     @ObservedResults(User.self) var users
     @Environment(\.realm) var realm
     var body: some View {
         VStack {
             Text("All registered users:")
-            // Note that if you comment the views below, the @ObservedResults users will not get populated with the new subscription results defined in the onAppear below, since the results are lazily loaded? This was very confusing at first, since using the onAppear to set a sub led me to believe this would automatically populate the user collection.
+            // Note that if you comment the views below, the @ObservedResults users will not get populated with the new subscription results defined in the onAppear below, since the results are lazily loaded?
                 List {
                     ForEach(users) { user in
                         Text(user._id)
