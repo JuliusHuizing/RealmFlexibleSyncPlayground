@@ -39,7 +39,7 @@ class AppState: ObservableObject {
     }
 
     init() {
-        app.currentUser?.logOut { _ in
-        }
+//        app.currentUser?.logOut { _ in
+//        }
     }
 }

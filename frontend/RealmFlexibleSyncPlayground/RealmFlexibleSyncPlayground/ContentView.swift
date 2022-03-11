@@ -30,7 +30,17 @@ struct ContentView: View {
                         LoggedInView(userID: $userID)
                             .environment(\.realmConfiguration,
                                           app.currentUser!.flexibleSyncConfiguration())
-                    } else {
+                        
+//                            .environment(\.realmConfiguration, V)
+                    }
+                    // This will happen when a user closes the app and return to the app
+                    else if let _ = app.currentUser {
+//                             userID = user.id
+                        LoggedInView(userID: $userID)
+                            .environment(\.realmConfiguration,
+                                          app.currentUser!.flexibleSyncConfiguration())
+                    }
+                    else {
                         LoginView(userID: $userID)
                     }
                     Spacer()
