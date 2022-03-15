@@ -27,15 +27,14 @@ struct DailyDiaryView: View {
                         VStack{
                             Text(entry.title)
                             Text(entry.body)
-//                            Button("Edit") {
-                                //  TODO: After pressing this button on a just created diary entry (see button below), I would expect the DetailDiaryView to immediately show a diary entry with title 'test title' ad body 'test body'. Instead, it often first shows empty strings, and only shows the expected strings after multiple attempts or after adding more diary entries with the button below.
-                                NavigationLink("edit", destination:DiaryEntryDetailView(user: user, diaryEntry: entry))
-//                                selectedDiaryEntry = entry
-//                                if selectedDiaryEntry != nil {
-//                                    showingSheet = true
-//                                }
-//
-//                            }
+                            Button("Edit") {
+                                selectedDiaryEntry = entry
+                                // TODO: Discuss: Selected diary entry is checked not to be nil, so I'd expect the sheet to present a detailView with the diaryEntry values of the just selected entry (title = "test title", body = 'test body'. Instead, the sheet still finds nill and will present the fallback value unexpected defined as '?? DiaryEntry(ownerID: user._id, title: "found nil", body: "why?"))'. Only after creating an additional entry by hitting the "add entry to diary' button, and then presenting the sheet again, are the expected values shown in the detail view.
+                                if selectedDiaryEntry != nil {
+                                    showingSheet = true
+                                }
+
+                            }
                         }
                     }
                 }
@@ -49,7 +48,8 @@ struct DailyDiaryView: View {
                 $diaryEntries.append(initDiaryEntry)
             }
         }}.sheet(isPresented: $showingSheet, onDismiss: {}) {
-            DiaryEntryDetailView(user: user, diaryEntry: selectedDiaryEntry!)
+            // TODO: Discuss: How can this be nill if we just checked above that it should not be? And why does it only get the intende value after creating multiple diary entries using the add button?
+            DiaryEntryDetailView(user: user, diaryEntry: selectedDiaryEntry ?? DiaryEntry(ownerID: user._id, title: "found nil", body: "why?"))
 //                .onAppear(perform: {
 ////                    todaysDiaryEntires = diaryEntries.filter{
 ////                        Calendar.current.isDate(date, equalTo: $0.date, toGranularity: .day)

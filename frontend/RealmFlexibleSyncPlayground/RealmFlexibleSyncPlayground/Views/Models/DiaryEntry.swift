@@ -15,8 +15,10 @@ class DiaryEntry: Object, ObjectKeyIdentifiable {
     @Persisted var body = ""
     @Persisted var date: Date
 
-    convenience init(ownerID: String) {
+    convenience init(ownerID: String, title:String = "default", body: String = "default") {
         self.init()
         self.ownerID = ownerID
+        self.title = title
+        self.body = body
     }
 }
