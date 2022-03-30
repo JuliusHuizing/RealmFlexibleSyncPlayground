@@ -85,10 +85,10 @@
 		C6337B1227D7ADAD00E04A54 /* RealmFlexibleSyncPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				C6337B1327D7ADAD00E04A54 /* RealmFlexibleSyncPlaygroundApp.swift */,
 				C6337B2627D7B06F00E04A54 /* AppState.swift */,
 				C6337B1527D7ADAD00E04A54 /* ContentView.swift */,
 				C6337B3827D8BCCB00E04A54 /* Fns */,
-				C6337B1327D7ADAD00E04A54 /* RealmFlexibleSyncPlaygroundApp.swift */,
 				C6337B3727D8B86F00E04A54 /* Views */,
 				C6337B1727D7ADAE00E04A54 /* Assets.xcassets */,
 				C6337B1927D7ADAE00E04A54 /* Preview Content */,

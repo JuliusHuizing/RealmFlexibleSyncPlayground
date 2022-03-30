@@ -18,7 +18,7 @@ struct DiaryView: View {
         NavigationView {
             List {
                 ForEach(datesThisWeek, id: \.self) { date in
-                    NavigationLink(destination: DailyDiaryView(user: user, date: date)) {
+                    NavigationLink(destination: DailyDiaryView(userInput: user, date: date)) {
                         Text(date.description)
                     }
                 }

@@ -13,6 +13,9 @@ struct NetworkView: View {
     // TODO: discuss why this still seems to show users that have been deleted?
     @ObservedResults(User.self) var users
     @Environment(\.realm) var realm
+    var incomingFriends: [User]? {
+        users.filter({user.friendRequestsIncoming.contains($0._id)})
+       }
     var body: some View {
         VStack {
             
@@ -56,7 +59,13 @@ struct NetworkView: View {
                 }
             
         }
-            .onAppear(perform: {setSubscriptionUserAll(realm: realm)}) // Note that  this sub will add new
+            .onAppear(perform: {
+                setSubscriptionUserAll(realm: realm)
+                
+//                incomingFriendRequestsIds = users.where {
+//                    $0._id != ""
+//                }
+            }) // Note that  this sub will add new
     }
     
     private func addFriend(userID: String) -> Void {

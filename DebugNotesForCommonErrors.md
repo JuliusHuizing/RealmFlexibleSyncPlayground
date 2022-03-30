@@ -1,0 +1,1 @@
+* As soon as you import RealmSwift into a Swift file, some errors are are due to Xcode using a different Type than you expect it to use when initializing an instance of one. Solve this by explicitly denoting whether you mean a RealmSwift.List or a SwiftUI.List, etc.

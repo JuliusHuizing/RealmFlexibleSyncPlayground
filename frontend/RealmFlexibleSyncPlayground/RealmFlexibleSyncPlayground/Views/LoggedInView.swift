@@ -35,7 +35,8 @@ struct LoggedInView: View {
             }
         }
         .onAppear(perform:
-                    {setSubscriptionUserCurrent(userID: userID, realm: realm)}
+                    {
+            setSubscriptionUserCurrent(userID: userID, realm: realm)}
         )
     }
 }

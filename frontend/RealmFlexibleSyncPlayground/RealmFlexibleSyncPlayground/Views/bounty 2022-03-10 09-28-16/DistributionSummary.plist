@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bounty.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>7FFDAF7680D09F8996795AE27200CE0E1FEE3D39</string>
+				<key>dateExpires</key>
+				<string>10/03/2023</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>676248Z4DL.julius.bounty</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>676248Z4DL</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>676248Z4DL.julius.bounty</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>bounty.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>025f594c-1ffb-43ad-8507-895516182ca5</string>
+				<key>dateExpires</key>
+				<string>10/03/2023</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: julius.bounty</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>676248Z4DL</string>
+				<key>name</key>
+				<string>Julius Huizing</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
