@@ -61,6 +61,9 @@ struct HomeView: View {
                 }
 
         }
+        .task {
+            setSubscriptionDiaryEntriesBeforeToday(realm: realm)
+        }
         }.onAppear(perform: {
             // Note we do not need to do a sub to the users again, as a parent of this view, LoggedinView, has already done that sub for us and now we still have access to its results through the @ObservedResults(User.self) var users collection at the top of the view.
             

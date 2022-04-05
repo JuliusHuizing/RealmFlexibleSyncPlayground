@@ -98,3 +98,18 @@ func setSubscriptionDiaryEntryUser(user: User, realm: Realm) {
             }
         }
 }
+
+
+func setSubscriptionDiaryEntriesBeforeToday(realm: Realm) {
+        let subscriptions = realm.subscriptions
+        subscriptions.write {
+            if let currentSubscription = subscriptions.first(named: "diary entry before date") {
+                currentSubscription.update(toType: DiaryEntry.self) { entry in
+                    entry.date <= Date.now                }
+            } else {
+                subscriptions.append(QuerySubscription<DiaryEntry>(name: "diary entry before date") { entry in
+                    entry.date <= Date.now
+                })
+            }
+        }
+}
